@@ -46,7 +46,7 @@ const GetAllApplicationsCards = () => {
 		setValues({ ...values, isFetching : true });
 		getFilteredApplications({})
 		.then(data => {
-			console.log(data);
+			// console.log(data);
 			setValues({...values, applications : data, isFetching : false})
 		})
 		.catch(error => {
@@ -66,7 +66,7 @@ const GetAllApplicationsCards = () => {
 	}
 
 	const openCommentBox = (commentComplaintId) => {
-		console.log("Open Comment Box");
+		// console.log("Open Comment Box");
 		setValues({ ...values, isCommentBoxActive : !isCommentBoxActive, openComment: commentComplaintId})
 	}
 
@@ -78,9 +78,9 @@ const GetAllApplicationsCards = () => {
 			submitNewCommentAction({complaintId : commentComplaintId, isAgent : true, commentBy : "Tushar", body: newComment}).then(data => {
 				if(data.status != 200){
 					console.log("Problem adding a new Comment");
-					console.log(data.err)
+					// console.log(data.err)
 				}else{
-					console.log(data)
+					// console.log(data)
 					setValues({...values, newComment : ''})
 				}
 			})
@@ -100,10 +100,11 @@ const GetAllApplicationsCards = () => {
 					<div className="strip_list wow fadeIn" style={{padding: "10px 25px 10px 25px", marginBottom : "1px"}} key={application._id}>
 						{/* <a onClick={() => {sendContactInfo(complaint.name, complaint.phone, complaint.subject)}} className="wish_bt" title="Get Contact Info" ></a> */}
 						<div className="row">
-						<div className="col-lg-1">
+						<div className="col-lg-2">
+							<small><span className="badge badge-primary">Likes Working:{application.likeWorking.toString()}</span></small>
 							<small><small>{moment(application.createdAt).fromNow()}</small></small>
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-3">
                         <small style={{color : "#000"}}>{application.email}</small>
                         </div>
                         <div className="col-lg-3">
@@ -111,7 +112,7 @@ const GetAllApplicationsCards = () => {
                         <small style={{cursor: "pointer"}}>{application.mobile}</small>
                         <small style={{textTransform : "inherit"}}><a href={`mailto:${application.email}`}>{application.email}</a></small>
                         </div>
-                        <div className="col-lg-3">
+                        <div className="col-lg-2">
 							<div className="row">
 								<div className="col-12">
 									<Link href={{
@@ -133,7 +134,8 @@ const GetAllApplicationsCards = () => {
 								</div>
 							</div>
                         </div>
-                        <div className="col-lg-2">
+                        <div className="col-lg-1">
+							<a href={`${application.documentUrl}`} target="_blank"><button className="btn_1">Download Attachment</button></a>
                         </div>
                     </div>
 
