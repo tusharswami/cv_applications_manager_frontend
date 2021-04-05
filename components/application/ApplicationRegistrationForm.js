@@ -2,14 +2,13 @@ import Link from 'next/link';
 import Router from 'next/router';
 import {preRegisterApplication} from '../../actions/application';
 import { useState, useEffect } from 'react';
-import WarrantyOTP from './WarrantyOTP';
 import ApplicationSuccess from './ApplicationSuccess';
 const ApplicatioRegistrationForm = () => {
     const [values, setValues] = useState({
-        name : "Tushar",
-        email : "tusharswami01@gmail.com",
-        mobile : "7000805775",
-        coverLetter : "That's a cover letter",
+        name : "",
+        email : "",
+        mobile : "",
+        coverLetter : "",
         formData : '',
         likeWorking : true,
         termsAccepted : true,
@@ -133,7 +132,6 @@ const ApplicatioRegistrationForm = () => {
                 </div>
             )}
             {isApplicationSubmitted && (
-                // <h3>Warranty Registered Successfully for Invoice Number {invoiceNumber}</h3>
                 <ApplicationSuccess values={values}/>
             )}
         </div>

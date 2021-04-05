@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 const GetAllApplicationsCards = () => {
 	const router = useRouter()
     const [values, setValues] = useState({
-		complaints : [],
 		applications : [],
 		isDataModified : false,
 		isCommentBoxActive : false,
@@ -19,24 +18,18 @@ const GetAllApplicationsCards = () => {
 		isAgentEditVisible : false,
 		isFetching : false,
 		searchTerm : '',
-		complaintsSorted : [],
-		editKey : ''
     })
 
     const [filters, setFilters] = useState({
-        complaintId : '',
-        isActive : '',
-        status : 'unresolved',
-        priority : '',
+        status : '',
         phone : '',
         email : '',
-        concernedAgent : ''
 	})
 
 	const [agents, setAgents] = useState([]);
 	const token = getCookie('token');
-	let {complaints, applications, isDataModified, isCommentBoxActive, openComment, newComment, isDataInvalidated,complaintsSorted, isAgentEditVisible, isFetching, searchTerm, editKey} = values;
-	let {complaintId, isActive, status, priority, phone, email, concernedAgent} = filters;
+	let {applications, isDataModified, isCommentBoxActive, openComment, newComment, isDataInvalidated, isFetching, searchTerm, editKey} = values;
+	let {status, phone, email} = filters;
     useEffect(()=> {
 		init();
 		// getAllAgents();
