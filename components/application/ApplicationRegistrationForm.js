@@ -4,7 +4,7 @@ import {preRegisterApplication} from '../../actions/application';
 import { useState, useEffect } from 'react';
 import WarrantyOTP from './WarrantyOTP';
 import ApplicationSuccess from './ApplicationSuccess';
-const WarrantyRegistrationForm = () => {
+const ApplicatioRegistrationForm = () => {
     const [values, setValues] = useState({
         name : "Tushar",
         email : "tusharswami01@gmail.com",
@@ -140,4 +140,4 @@ const WarrantyRegistrationForm = () => {
     )
 }
 
-export default WarrantyRegistrationForm;
+export default ApplicatioRegistrationForm;

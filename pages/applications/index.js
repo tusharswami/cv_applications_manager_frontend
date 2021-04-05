@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import Private from '../../components/auth/Private';
-import GetAllComplaintsCards from '../../components/application/GetAllApplicationsCards'
+import GetAllApplicationsCards from '../../components/application/GetAllApplicationsCards'
 
 const allComplaints = () => {
     const head = () => (
@@ -16,7 +16,7 @@ const allComplaints = () => {
             {head()}
             <Private>
             <Layout>
-                <GetAllComplaintsCards />
+                <GetAllApplicationsCards />
             </Layout>
             </Private>
         </React.Fragment>

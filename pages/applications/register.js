@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import { useRouter } from 'next/router'
-import ComplaintRegistrationForm from '../../components/complaint/ComplaintRegistrationForm'
+import ApplicatioRegistrationForm from '../../components/application/ApplicationRegistrationForm'
 const RegisterComplaint = () => {
     const router = useRouter();
 
@@ -27,7 +27,7 @@ const RegisterComplaint = () => {
                                     </h3>
                                     </div>
                                     <hr/>
-                                    <ComplaintRegistrationForm incrementId={router.query.increment_id} nameQ={router.query.nameQ} emailQ={router.query.emailQ} phoneQ={router.query.phoneQ}/>
+                                    <ApplicatioRegistrationForm incrementId={router.query.increment_id} nameQ={router.query.nameQ} emailQ={router.query.emailQ} phoneQ={router.query.phoneQ}/>
                                 </div>
                             </div>
                         </div>
