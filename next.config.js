@@ -4,7 +4,7 @@ module.exports = withCSS({
     publicRuntimeConfig: {
         APP_NAME: 'GeoSpoc CV manager',
         API_DEVELOPMENT: 'http://localhost:8000/api',
-        API_PRODUCTION: 'https://cv-application-manager.herokuapp.com//api',
+        API_PRODUCTION: 'https://cv-application-manager.herokuapp.com/api',
         PRODUCTION: false,
         DOMAIN_PRODUCTION: 'https://sharp-shockley-118ffb.netlify.app/',
         DOMAIN_DEVELOPMENT: 'http://localhost:3000',
