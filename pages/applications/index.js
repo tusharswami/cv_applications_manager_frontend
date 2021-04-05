@@ -7,7 +7,7 @@ const allComplaints = () => {
     const head = () => (
         <Head>
             <title>
-                All Complaints | GeoSpoc Pvt Ltd
+                All Applications | GeoSpoc Pvt Ltd
             </title>
         </Head>
     );

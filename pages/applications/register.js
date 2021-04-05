@@ -8,7 +8,7 @@ const RegisterComplaint = () => {
     const head = () => (
         <Head>
             <title>
-                Create a Complaint Ticket | GeoSpoc Pvt Ltd
+                Submit an Application | GeoSpoc Pvt Ltd
             </title>
         </Head>
     );
